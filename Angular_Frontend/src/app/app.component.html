@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+ 
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+  <br/><br/>
+  Total number of combinations: <span *ngIf="phoneNumberCombinations">{{ phoneNumberCombinations.numberOfCombinations }}</span>
+  
+  <br><br/>
+  
+  <div *ngIf="phoneNumberCombinations">
+	<ul>
+		<div *ngFor="let item of phoneNumberCombinations.combinations;let i = index;">
+			<span *ngIf="phoneNumberCombinations ">{{ phoneNumberCombinations.combinations[i] }}</span>
+		</div>
+	</ul>
+  </div>
+  
+</div>
+
+
+<router-outlet></router-outlet>

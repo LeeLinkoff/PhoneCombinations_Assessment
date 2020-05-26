@@ -1,0 +1,2 @@
+cd Java_Source
+java SimpleHTTPServer
