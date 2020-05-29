@@ -89,6 +89,10 @@
             "scripts": []
           }
         },
+		"styles": [
+					"./node_modules/bootstrap/dist/css/bootstrap.min.css",  
+					"src/styles.css"  
+				  ],
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {

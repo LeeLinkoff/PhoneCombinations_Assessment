@@ -5,6 +5,17 @@
     Welcome to {{ title }}!
   </h1>
   
+<div class="container">  
+  <div class="form-group">  
+    <label for="phoneNum">Phone Number:</label>&nbsp;
+	<input type="text" [formControl]="phoneNum" />  
+  </div> 
+  <br/>
+  <div class="form-group">  
+	<button (click)="updatephoneNum()" class="btn btn-dark">Update Phone</button>  
+  </div>
+</div>  
+
   <br/><br/>
   Total number of combinations: <span *ngIf="phoneNumberCombinations">{{ phoneNumberCombinations.numberOfCombinations }}</span>
   

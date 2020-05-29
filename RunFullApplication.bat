@@ -1,3 +1,3 @@
 start cmd.exe /c .\StartWebServer.bat
-cd Phone-Combinations
+cd Angular_Frontend
 StartApp_ServeAndOpen.bat

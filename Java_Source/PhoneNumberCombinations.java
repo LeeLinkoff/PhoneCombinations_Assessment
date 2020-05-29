@@ -4,12 +4,11 @@ import java.io.*;
 
 public class PhoneNumberCombinations
 {
-	 //Vector<String> letterCombinations;
 	 List<String> phoneNumberCombinations;
 	 
  	 public PhoneNumberCombinations(String phone) throws Exception
 	 {
-		phoneNumberCombinations = new Vector<String>();
+		this.phoneNumberCombinations = new Vector<String>();
 	
 		List<String> specialNumbers = Arrays.asList((new String[] {"7","9"}));
 		List<String> ignoredNumbers = Arrays.asList((new String[] {"0","1"}));
@@ -19,6 +18,7 @@ public class PhoneNumberCombinations
 		long count;
 		
 		String cleansedPhoneNumber = phone.replace(" ","").trim();
+
 		if ( 
 		     ( (cleansedPhoneNumber.length()) == 7 || (cleansedPhoneNumber.length() == 10) )
 		      &&
@@ -48,14 +48,16 @@ public class PhoneNumberCombinations
 					{
 						StringBuilder newPhoneNumber = new StringBuilder(cleansedPhoneNumber);
 						newPhoneNumber.setCharAt(i, (char) j);
-						phoneNumberCombinations.add(newPhoneNumber.toString());
+						this.phoneNumberCombinations.add(newPhoneNumber.toString());
 					}
 				}
 			}
+			
+			System.out.println("combinations: " + this.phoneNumberCombinations.size());
 		}
 		else
 		{
-			throw new InvalidPhoneNumberException(phone);
+			throw new InvalidPhoneNumberException(cleansedPhoneNumber);
 		}
 	 }
 
